@@ -3,7 +3,6 @@
 <head>
 	<title>Travel Website</title>
 	<link rel="stylesheet" type="text/css" href="Index.css">
-	<script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
@@ -22,61 +21,80 @@
 			<li>
 			  <a href="#">
 				<span class="icon icon-flight"></span>
-				Flights
+				<p class="icon-name">Flights</p>
 			  </a>
 			</li>
 			<li>
 			  <a href="#">
 				<span class="icon icon-train"></span>
-				Trains
+				<p class="icon-name">Trains</p>
 			  </a>
 			</li>
 			<li>
 			  <a href="#">
 				<span class="icon icon-cab"></span>
-				Cabs
+				<p class="icon-name">Cabs</p>
 			  </a>
 			</li>
 			<li>
 			  <a href="#">
 				<span class="icon icon-bus"></span>
-				Buses
+				<p class="icon-name">Buses</p>
 			  </a>
 			</li>
 			<li>
 			  <a href="#">
 				<span class="icon icon-hotel"></span>
-				Hotels
+				<p class="icon-name">Hotels</p>
 			  </a>
 			</li>
 			<li>
 			  <a href="#">
 				<span class="icon icon-package"></span>
-				Tour Packages
+				<p class="icon-name">Packages</p>
 			  </a>
 			</li>
 		  </ul>
-		  
-		<div class="form-container">
-			<form>
-				<label for="from">From:</label>
-				<input type="text" id="from" name="from" placeholder="Enter origin city or airport" required>
+		  <!-- <div class="form-container"> -->
+		<form id="flights_id">
+			<label for="from">From:</label>
+			<input type="text" id="from" name="from" placeholder="Enter origin city or airport" required>
 
-				<label for="to">To:</label>
-				<input type="text" id="to" name="to" placeholder="Enter destination city or airport" required>
+			<label for="to">To:</label>
+			<input type="text" id="to" name="to" placeholder="Enter destination city or airport" required>
 
-				<label for="one-way">One-way:</label>
-				<input type="radio" id="one-way" name="trip-type" value="one-way" checked>
+			<label for="one-way">One-way:</label>
+			<input type="radio" id="one-way" name="trip-type" value="one-way" checked>
 
-				<label for="two-way">Two-way:</label>
-				<input type="radio" id="two-way" name="trip-type" value="two-way">
+			<label for="two-way">Two-way:</label>
+			<input type="radio" id="two-way" name="trip-type" value="two-way">
 
-				<label for="date">Travel Date:</label>
-				<input type="date" id="date" name="date" required>
+			<label for="date">Travel Date:</label>
+			<input type="date" id="date" name="date" required>
 
-				<input type="submit" value="Search Flights">
-			</form>
-		</div>
+			<button onclick="document.location='loading-page.html'">Search Flights</button>
+		</form>
+		<!-- </div> -->
+		
+		<!-- //<script>
+			function submitForm() {
+				let form = document.getElementById("flights_id");
+				form.submit();
+			} -->
+			<!-- function flights_func(){
+				const formContainer = document.querySelector('.form-container');
+				const openFormButton = document.querySelector('.open-form-button');
+				const closeFormButton = document.querySelector('.close-form-button');
+
+				openFormButton.addEventListener('click', () => {
+				formContainer.style.display = 'flex';
+				});
+				
+				closeFormButton.addEventListener('click', () => {
+				formContainer.style.display = 'none';
+				});
+		} -->
+		<!-- </script> -->
 	</main>
 	<footer>
 		<div class="footer-content">
