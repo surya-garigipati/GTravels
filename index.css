@@ -2,9 +2,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
   }
-  
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(background-image.jpg);
+    background-size: cover;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom right, #53aaf2, #13ba36);
@@ -81,25 +91,35 @@
   }
   
   .icon {
-    display: inline-block;
+    display: block;
+    padding: 10px;
     width: 50px;
     height: 50px;
     background-size: cover;
+    border-radius: 10px;
+    background-color: aqua;
     margin-right: 10px;
   }
   .icon-name {
     display: block;
+    background-color: white;
+    padding: 2.5px 5px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
+    text-decoration: white;
     color: #333;
   }
-  
+
+  .icon:hover{
+    box-shadow: #333 10px 5px 10px 5px;
+  }
+
   .icon-name:hover {
     color: #fff;
     background-color: #007bff;
+    box-shadow: #333 10px 5px 10px 5px;
   }
   
   .icon-flight {
@@ -126,9 +146,18 @@
     background-image: url("conveyor.gif");
   }
   
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   
   /* Form styles */
   .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -154,22 +183,13 @@
   
   .form-submit {
     padding: 10px 20px;
-    background-color: #53aaf2;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    background-color: #53aaf2
   }
-  
-  .form-submit:hover {
-    background-color: #0f7cb6;
-  }
-  
+
   /* Footer styles */
   footer {
     position: fixed;
+    text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
