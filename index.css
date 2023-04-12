@@ -67,21 +67,65 @@
     margin-top: 50px;
   }
   
+  .icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .icon-list li {
+    margin: 0 20px;
+  }
+  
   .icon {
-    margin: 20px;
-    text-align: center;
-    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin-right: 10px;
   }
-  
-  .icon img {
-    height: 120px;
-    margin-bottom: 10px;
-  }
-  
-  .icon p {
-    font-size: 24px;
+  .icon-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
   }
+  
+  .icon-name:hover {
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  .icon-flight {
+    background-image: url("airplane.gif");
+  }
+  
+  .icon-train {
+    background-image: url("train.gif");
+  }
+  
+  .icon-cab {
+    background-image: url("taxi.gif");
+  }
+  
+  .icon-bus {
+    background-image: url("bus.gif");
+  }
+  
+  .icon-hotel {
+    background-image: url("building.gif");
+  }
+  
+  .icon-package {
+    background-image: url("conveyor.gif");
+  }
+  
   
   /* Form styles */
   .form-container {
