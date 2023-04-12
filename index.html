@@ -1,114 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Website</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		header {
-			background-color: #333;
-			color: white;
-			text-align: center;
-			padding: 10px;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			min-height: calc(100vh - 50px);
-			background-color: #f2f2f2;
-		}
-		h1 {
-			font-size: 3rem;
-			margin-bottom: 30px;
-			text-align: center;
-		}
-		.icon-container {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: flex-end;
-			max-width: 900px;
-			margin: 0 auto;
-		}
-		.icon-container div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 20px;
-		}
-		.icon-container img {
-			max-width: 100px;
-			height: auto;
-		}
-		.ad-rep {
-			display: flex;
-			align-items: center;
-			margin: 10px;
-			padding: 10px;
-			border: 1px solid #333;
-			background-color: white;
-			max-width: 250px;
-		}
-		.ad-rep img {
-			max-width: 80px;
-			height: auto;
-			margin-right: 20px;
-		}
-		.footer {
-			background-color: #333;
-			color: white;
-			text-align: center;
-			padding: 10px;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-		}
-	</style>
+	<title>Travel Website</title>
+	<link rel="stylesheet" type="text/css" href="Index.css">
+	<script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
-		<h1>Pick a Travel!</h1>
-		<div class="button-container">
-			<button><a href="Login.html">Login</button>
-			<button><a href="Signup.html">Sign Up</button>
+		<div class="logo-container">
+			<div class="logo">
+				<h1>Travel</h1>
+			</div>
+		</div>
+		<div class="header-buttons">
+			<button class="login-button">Login</button>
+			<button class="signup-button">Sign Up</button>
 		</div>
 	</header>
-	<div class="container">
-		<div class="icon-container">
-			<div>
-				<img src="flight.png" alt="Flight Icon">
-				<p>Flight</p>
+	<main>
+		<div class="icons-container">
+			<div class="icon">
+				<i class="fas fa-plane"></i>
+				<h3>Flights</h3>
 			</div>
-			<div>
-				<img src="bus.png" alt="Bus Icon">
-				<p>Bus</p>
+			<div class="icon">
+				<i class="fas fa-train"></i>
+				<h3>Trains</h3>
 			</div>
-			<div>
-				<img src="cab.png" alt="Cab Icon">
-				<p>Cab</p>
+			<div class="icon">
+				<i class="fas fa-taxi"></i>
+				<h3>Cabs</h3>
 			</div>
-			<div>
-				<img src="train.png" alt="Train Icon">
-				<p>Train</p>
+			<div class="icon">
+				<i class="fas fa-bus"></i>
+				<h3>Buses</h3>
+			</div>
+			<div class="icon">
+				<i class="fas fa-hotel"></i>
+				<h3>Hotels</h3>
+			</div>
+			<div class="icon">
+				<i class="fas fa-suitcase"></i>
+				<h3>Tour Packages</h3>
 			</div>
 		</div>
-		<div class="ad-container">
-			<div class="ad-rep">
-				<img src="ad1.png" alt="Ad Representative">
-				<div>
-					<h3>Ad Representative 1</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</div>
-			</div>
-			<div class="ad-rep">
-				<img src="ad2.png" alt="Ad Representative">
-				<div>
-					<h3>Ad Representative 2</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+		<div class="form-container">
+			<form>
+				<label for="from">From:</label>
+				<input type="text" id="from" name="from" placeholder="Enter origin city or airport" required>
 
+				<label for="to">To:</label>
+				<input type="text" id="to" name="to" placeholder="Enter destination city or airport" required>
 
-   
+				<label for="one-way">One-way:</label>
+				<input type="radio" id="one-way" name="trip-type" value="one-way" checked>
+
+				<label for="two-way">Two-way:</label>
+				<input type="radio" id="two-way" name="trip-type" value="two-way">
+
+				<label for="date">Travel Date:</label>
+				<input type="date" id="date" name="date" required>
+
+				<input type="submit" value="Search Flights">
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div class="footer-content">
+			<p>&copy; 2023 Surya Bhargav Garigipati</p>
+			<p>Reach me at: sgarigipati@yahoo.com</p>
+		</div>
+	</footer>
+</body>
+</html>
